@@ -20,7 +20,7 @@ async function getData(user){
 
     lista.innerHTML = tareas.map(tarea => {
         return `
-            <div class="bg-white p-3 rounded-lg shadow">
+            <div class="bg-zinc-500 p-3 rounded-lg shadow">
                 <h3 class="font-bold">${tarea.titulo}</h3>
                 <p>${tarea.descripcion}</p>
                 <p>Estado: ${tarea.status}</p>
