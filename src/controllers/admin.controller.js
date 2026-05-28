@@ -46,32 +46,32 @@ function renderTareas(tareas) {
 
     lista.innerHTML = tareas.map(tarea => {
         return `
-            <div class="bg-white p-3 rounded-lg shadow flex flex-col gap-2">
+            <div class="bg-zinc-500 p-3 rounded-lg shadow flex flex-col gap-2">
                 <div class="flex justify-between items-center">
                     <h3 class="font-bold">${tarea.titulo}</h3>
-                    <span class="text-xs text-gray-500">Usuario: ${tarea.id_user}</span>
+                    <span class="text-xs text-gray-800">ID del Usuario: ${tarea.id_user}</span>
                 </div>
                 <p>${tarea.descripcion}</p>
                 <div class="flex gap-2 items-center flex-wrap">
-                    <select id="status-${tarea.id}" class="bg-gray-200 rounded p-1 text-sm">
+                    <select id="status-${tarea.id}" class="bg-zinc-600 text-white border border-gray-500 rounded p-1 text-sm">
                         <option value="pendiente"   ${tarea.status === "pendiente"  ? "selected" : ""}>Pendiente</option>
                         <option value="process"     ${tarea.status === "process"    ? "selected" : ""}>En proceso</option>
                         <option value="completed"   ${tarea.status === "completed"  ? "selected" : ""}>Completada</option>
                     </select>
-                    <button onclick="cambiarStatus('${tarea.id}')" class="bg-blue-400 text-white px-3 py-1 rounded text-sm cursor-pointer hover:-translate-y-0.5">
+                    <button onclick="cambiarStatus('${tarea.id}')" class="bg-[rgb(255,208,0)] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(255,210,0,0.45)] hover:bg-[#ffe033] border-yellow-500 border-2 px-3 py-1 hover:font-bold rounded-xl text-sm cursor-pointer ">
                         Cambiar estado
                     </button>
-                    <button onclick="editarTarea('${tarea.id}')" class="bg-yellow-400 px-3 py-1 rounded text-sm cursor-pointer hover:-translate-y-0.5">
+                    <button onclick="editarTarea('${tarea.id}')" class="bg-[rgb(255,208,0)] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(255,210,0,0.45)] hover:bg-[#ffe033] border-yellow-500 border-2 px-3 py-1 hover:font-bold rounded-xl text-sm cursor-pointer ">
                         Editar
                     </button>
-                    <button onclick="eliminarTarea('${tarea.id}')" class="bg-red-400 text-white px-3 py-1 rounded text-sm cursor-pointer hover:-translate-y-0.5">
+                    <button onclick="eliminarTarea('${tarea.id}')" class="bg-[rgb(255,208,0)] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(255,210,0,0.45)] hover:bg-[#ffe033] border-yellow-500 border-2 px-3 py-1 hover:font-bold rounded-xl text-sm cursor-pointer">
                         Eliminar
                     </button>
                 </div>
                 <!-- Formulario de edición (oculto por defecto) -->
                 <div id="edit-${tarea.id}" class="hidden flex flex-col gap-2 mt-2">
-                    <input id="edit-titulo-${tarea.id}" type="text" value="${tarea.titulo}" class="bg-gray-200 rounded p-2">
-                    <textarea id="edit-desc-${tarea.id}" class="bg-gray-200 rounded p-2 resize-none">${tarea.descripcion}</textarea>
+                    <input id="edit-titulo-${tarea.id}" type="text" value="${tarea.titulo}" class="bg-zinc-600 text-white placeholder:text-gray-500 border border-gray-500 rounded p-2">
+                    <textarea id="edit-desc-${tarea.id}" class="bg-zinc-600 text-white placeholder:text-gray-500 border border-gray-500 rounded p-2 resize-none">${tarea.descripcion}</textarea>
                     <button onclick="guardarEdicion('${tarea.id}')" class="bg-green-400 px-3 py-1 rounded text-sm cursor-pointer">Guardar</button>
                 </div>
             </div>

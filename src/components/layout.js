@@ -40,10 +40,10 @@ export default function layout() {
   const routes = renderRoute()
   return `
     <header class="flex flex-row bg-neutral-900 justify-between w-full px-2 py-3">
-        <button class="bg-blue-200 px-5 py-1 rounded-full cursor-pointer">
+        <button class="bg-[rgb(255,208,0)] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(255,210,0,0.45)] hover:bg-[#ffe033] border-yellow-500 border-2 px-5 py-1 rounded-full cursor-pointer">
           User
         </button>
-        <button id="btnLogout" class="bg-cyan-300 px-5 py-1 rounded-full cursor-pointer">Logout</button>
+        <button id="btnLogout" class="bg-[rgb(255,208,0)] hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(255,210,0,0.45)] hover:bg-[#ffe033] border-yellow-500 border-2 px-5 py-1 rounded-full cursor-pointer">Logout</button>
       </header>
       <section class="grid grid-cols-8">
         <sidebar class="bg-neutral-900 min-h-screen col-span-1">
@@ -54,7 +54,7 @@ export default function layout() {
                 }
             </div>
         </sidebar>
-        <main id="principal_content" class="bg-zinc-800 col-span-7 p-5">
+        <main id="principal_content" class="flex flex-col bg-zinc-800 col-span-7 p-5">
         </main>
       </section>`
 }
