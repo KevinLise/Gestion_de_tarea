@@ -3,5 +3,6 @@ export default function homeView(){
     <bh class="text-center text-gray-400 mt-2">Bienvenido a tu gestor de tareas</bh>
     <hr class="my-5 border-gray-600">
     <div class="flex flex-col gap-3 items-center w-full h-full">
-        <image src="/home.jpg" class="w-full h-full"></image>
+        <image src="/home.jpg" class="hidden md:block w-full"></image>
+        <img src="/mobile-home.jpg" class="block md:hidden w-full">
     </div>`}

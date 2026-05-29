@@ -13,9 +13,8 @@ export async function loginController(){
         }
 
         const userData = await loginFunction(username, password)
-        console.log("data", userData);
         
-        if(userData){
+        if(userData.length > 0){
             localStorage.setItem("user", JSON.stringify(userData[0]))
             window.location.href = "#home"
         }else{
