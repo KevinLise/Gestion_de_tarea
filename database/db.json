@@ -27,39 +27,18 @@
   ],
   "todo_list": [
     {
-      "titulo": "hola",
-      "descripcion": "quien sabe",
-      "id_user": "2",
-      "status": "process",
-      "id": 1
-    },
-    {
-      "titulo": "por sera ",
-      "descripcion": "por que sera\n",
-      "id_user": "2",
-      "status": "pendiente",
-      "id": 2
-    },
-    {
-      "titulo": "kevin se fue ",
-      "descripcion": "nose",
-      "id_user": "1",
-      "status": "pendiente",
-      "id": 3
-    },
-    {
       "titulo": "quien sae lo que s kevin",
       "descripcion": "",
       "id_user": "1",
       "status": "pendiente",
-      "id": 4
+      "id": "4"
     },
     {
-      "titulo": "",
-      "descripcion": "",
-      "id_user": "1",
+      "titulo": "que",
+      "descripcion": "so\n",
+      "id_user": "2",
       "status": "pendiente",
-      "id": 5
+      "id": "K19wjl8IYFA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

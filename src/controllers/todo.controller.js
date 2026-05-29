@@ -33,6 +33,11 @@ async function saveData(user){
     const titulo = document.getElementById("titulo").value
     const descripcion = document.getElementById("descripcion").value
 
+    if(!titulo || !descripcion){
+        alert("Los campos son obligatorios")
+        return
+    }
+
     const response = await fetch("http://localhost:3000/todo_list", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

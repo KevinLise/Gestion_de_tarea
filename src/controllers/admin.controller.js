@@ -93,16 +93,20 @@ window.cambiarStatus = async function(id) {
 }
 
 window.eliminarTarea = async function(id) {
-    await fetch(`http://localhost:3000/todo_list/${id}`, {
-        method: "DELETE"
-    })
-
+    const confirmDelete = confirm("¿Estás seguro de eliminar esta tarea?")
+    if(confirmDelete) {
+        await fetch(`http://localhost:3000/todo_list/${id}`, {
+            method: "DELETE"
+        })
+    }
+    alert("Tarea eliminada")
     await getData()
 }
 
 window.editarTarea = function(id) {
     const form = document.getElementById(`edit-${id}`)
     form.classList.toggle("hidden")
+    
 }
 
 window.guardarEdicion = async function(id) {
@@ -114,6 +118,6 @@ window.guardarEdicion = async function(id) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ titulo, descripcion })
     })
-
+    alert("Tarea editada")
     await getData()
 }
