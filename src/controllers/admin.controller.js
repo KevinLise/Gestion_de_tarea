@@ -14,11 +14,12 @@ async function getData() {
     // Construir query params
     let query = ""
     if (status) query += `status=${status}&`
-    if (search) query += `search=${search}&`
-    if (user)   query += `user=${user}&`
+    if (search) query += `titulo:contains=${search}&`
+    if (user) query += `id_user=${user}&`
 
     const url = `http://localhost:3000/todo_list${query ? "?" + query : ""}`
-
+    console.log(url);
+    
     const response = await fetch(url)
     let tareas = await response.json()
 
